@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/DELL/End2End_DS_Projects/JobTechGuide/notebooks/../models/mlruns/575469692944745015/bed8aaa71e6c4c3dbb8f26b780952a20/artifacts
+end_time: 1723239565670
+entry_point_name: ''
+experiment_id: '575469692944745015'
+lifecycle_stage: active
+run_id: bed8aaa71e6c4c3dbb8f26b780952a20
+run_name: 'Baseline model: Logistic Regression '
+run_uuid: bed8aaa71e6c4c3dbb8f26b780952a20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723239565624
+status: 3
+tags: []
+user_id: DELL
