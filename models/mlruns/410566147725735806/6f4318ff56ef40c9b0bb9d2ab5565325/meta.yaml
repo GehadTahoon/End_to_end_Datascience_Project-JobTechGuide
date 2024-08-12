@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/DELL/End2End_DS_Projects/JobTechGuide/notebooks/../models/mlruns/410566147725735806/6f4318ff56ef40c9b0bb9d2ab5565325/artifacts
+deleted_time: 1723473033694
+end_time: 1723463712617
+entry_point_name: ''
+experiment_id: '410566147725735806'
+lifecycle_stage: deleted
+run_id: 6f4318ff56ef40c9b0bb9d2ab5565325
+run_name: 'Random Forest: with PCA + Hyperparamter tuning'
+run_uuid: 6f4318ff56ef40c9b0bb9d2ab5565325
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1723463682512
+status: 3
+tags: []
+user_id: DELL
