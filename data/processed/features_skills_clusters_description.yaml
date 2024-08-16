@@ -1,15 +1,4 @@
 skills_group_0:
-- Groovy
-- Java
-- Oracle
-- Oracle Cloud Infrastructure
-- Spring
-- Atom
-- Eclipse
-- IntelliJ
-- NetBeans
-- Sublime Text
-skills_group_1:
 - C#
 - F#
 - PowerShell
@@ -25,17 +14,34 @@ skills_group_1:
 - Notepad++
 - Rider
 - Visual Studio
+skills_group_1:
+- Groovy
+- Java
+- Oracle
+- Oracle Cloud Infrastructure
+- Spring
+- Atom
+- Eclipse
+- IntelliJ
+- NetBeans
+- Sublime Text
 skills_group_10:
-- Cassandra
-- Couchbase
-- Elasticsearch
-- Redis
-- DigitalOcean
+- Dart
+- Kotlin
+- Firebase
+- SQLite
+- Google Cloud Platform
+- Flutter
+- Android Studio
 skills_group_11:
-- Ruby
-- Ruby on Rails
-- RubyMine
-- TextMate
+- Node.js
+- MongoDB
+- Heroku
+- Express
+- Gatsby
+- React.js
+- React Native
+- Yarn
 skills_group_12:
 - Assembly
 - C
@@ -45,12 +51,9 @@ skills_group_13:
 - Unity 3D
 - Unreal Engine
 skills_group_14:
-- APL
-- COBOL
-- Crystal
-- Delphi
-- IBM DB2
-- IBM Cloud or Watson
+- Julia
+- R
+- RStudio
 skills_group_15:
 - Svelte
 - Deno
@@ -60,13 +63,13 @@ skills_group_16:
 - Angular.js
 - Cordova
 skills_group_17:
-- Objective-C
-- Swift
-- Xcode
-skills_group_18:
 - Bash/Shell
 - Perl
 - Vim
+skills_group_18:
+- Objective-C
+- Swift
+- Xcode
 skills_group_19:
 - Scala
 - Apache Spark
@@ -82,10 +85,12 @@ skills_group_2:
 - IPython/Jupyter
 - PyCharm
 skills_group_20:
-- HTML/CSS
-- JavaScript
-- jQuery
-- Visual Studio Code
+- APL
+- COBOL
+- Crystal
+- Delphi
+- IBM DB2
+- IBM Cloud or Watson
 skills_group_21:
 - Elixir
 - Erlang
@@ -94,37 +99,6 @@ skills_group_22:
 - TensorFlow
 - Torch/PyTorch
 skills_group_3:
-- Clojure
-- Haskell
-- LISP
-- Rust
-- Emacs
-- Neovim
-skills_group_4:
-- Ansible
-- Chef
-- Flow
-- Pulumi
-- Puppet
-- Terraform
-skills_group_5:
-- Go
-- DynamoDB
-- PostgreSQL
-- AWS
-- Docker
-- Git
-- Kubernetes
-skills_group_6:
-- Node.js
-- MongoDB
-- Heroku
-- Express
-- Gatsby
-- React.js
-- React Native
-- Yarn
-skills_group_7:
 - PHP
 - MariaDB
 - MySQL
@@ -134,15 +108,41 @@ skills_group_7:
 - Vue.js
 - PHPStorm
 - Webstorm
+skills_group_4:
+- Clojure
+- Haskell
+- LISP
+- Rust
+- Emacs
+- Neovim
+skills_group_5:
+- Go
+- DynamoDB
+- PostgreSQL
+- AWS
+- Docker
+- Git
+- Kubernetes
+skills_group_6:
+- HTML/CSS
+- JavaScript
+- jQuery
+- Visual Studio Code
+skills_group_7:
+- Cassandra
+- Couchbase
+- Elasticsearch
+- Redis
+- DigitalOcean
 skills_group_8:
-- Julia
-- R
-- RStudio
+- Ruby
+- Ruby on Rails
+- RubyMine
+- TextMate
 skills_group_9:
-- Dart
-- Kotlin
-- Firebase
-- SQLite
-- Google Cloud Platform
-- Flutter
-- Android Studio
+- Ansible
+- Chef
+- Flow
+- Pulumi
+- Puppet
+- Terraform

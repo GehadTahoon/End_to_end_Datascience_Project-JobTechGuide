@@ -1,6 +1,6 @@
-LOG_DATA_PKL    =  "data.pkl"
-LOG_MODEL_PKL   =  "model.pkl"
-LOG_METRICS_PKL =  "metrics.pkl"
+LOG_DATA_PKL = "data.pkl"
+LOG_MODEL_PKL = "model.pkl"
+LOG_METRICS_PKL = "metrics.pkl"
 #______________________________________________________________________________
 
 import os 
@@ -140,7 +140,7 @@ class JobPrediction:
     # **************    Simulation Functions    **************
     # ========================================================
 
-    def recommend_new_skills(self, available_skills, target_job, threshold=0):
+    def recommend_new_skills(self, available_skills, target_job, threshold=0.1):
         # Calculate base probability
         base_predictions = self.predict_jobs_probabilities(available_skills)
 
