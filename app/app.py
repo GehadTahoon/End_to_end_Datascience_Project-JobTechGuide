@@ -1,7 +1,19 @@
+# constants
+DATA_PATH = 'file:///C:/Users/DELL/End2End_DS_Projects/JobTechGuide/data/processed/2_cleaned_data.pkl'
+
+
+# import packages
 import streamlit as st 
 import pandas as pd
 
-#def home():
+# read data
+data = pd.read_pickle(DATA_PATH)
+
+languages = data['LanguageHaveWorkedWith'].columns.tolist()
+databases = data['DatabaseHaveWorkedWith'].columns.tolist()
+frameworks = data['WebframeHaveWorkedWith'].columns.tolist()
+othertech = data['MiscTechHaveWorkedWith'].columns.tolist()
+tools = data['ToolsTechHaveWorkedWith'].columns.tolist()
 
 # for the heading
 st.markdown(
@@ -16,7 +28,7 @@ st.markdown(
 st.markdown(
     """
     <h4 style="text-align: left; padding-top: 100px; color: black; font-family: 'Constantia'; ">
-        Select your current skills✨
+        Select your current skills ⭐
     </h4>
     """,
     unsafe_allow_html=True
@@ -30,7 +42,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.multiselect('Languages', ['Python', 'C','C++'],label_visibility = 'collapsed')
+selected_languages = st.multiselect('Languages', languages,label_visibility = 'collapsed')
 
 # for database skills
 st.markdown(
@@ -41,7 +53,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.multiselect('Databases', ['SQL'],label_visibility = 'collapsed')
+selected_databases = st.multiselect('Databases', databases, label_visibility = 'collapsed')
 
 # for Web Frameworks skills
 st.markdown(
@@ -52,7 +64,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.multiselect('Web Frameworks', ['Flask'],label_visibility = 'collapsed')
+selected_frameworks = st.multiselect('Web Frameworks', frameworks, label_visibility = 'collapsed')
 
 # for Other Tech skills
 st.markdown(
@@ -63,7 +75,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.multiselect('Other Tech', [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],label_visibility = 'collapsed')
+selected_othertech = st.multiselect('Other Tech', othertech, label_visibility = 'collapsed')
 
 
 # for Tools skills
@@ -75,7 +87,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-st.multiselect('Tools', ['Git'],label_visibility = 'collapsed')
+selected_tools = st.multiselect('Tools', tools, label_visibility = 'collapsed')
 
 
 st.markdown(
@@ -86,8 +98,17 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+skills = [] + selected_languages + selected_databases + selected_frameworks \
+        + selected_othertech + selected_tools
+
 if st.button('Hit here 😃',use_container_width=True):
-    st.switch_page("pages/predict_jobs.py")
+    # Store selected values in session state
+    st.session_state.selected_skills = skills
+
+    if len(skills) == 0:
+        st.warning('Select your current skills')       
+    else :
+        st.switch_page("pages/predict_jobs.py")
 
 st.markdown(
     """
@@ -98,12 +119,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 if st.button('Hit here 😀',use_container_width=True):
-    st.switch_page("pages/simulate_skills.py")
+    # Store selected values in session state
+    st.session_state.selected_skills = skills
+    if len(skills) == 0:
+        st.warning('Select your current skills')       
+    else :
+        st.switch_page("pages/simulate_skills.py")
 
 
 
 
 #*******************************************
-
-
 
