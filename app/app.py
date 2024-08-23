@@ -15,6 +15,8 @@ frameworks = data['WebframeHaveWorkedWith'].columns.tolist()
 othertech = data['MiscTechHaveWorkedWith'].columns.tolist()
 tools = data['ToolsTechHaveWorkedWith'].columns.tolist()
 
+jobs = data['DevType'].columns.tolist()
+
 # for the heading
 st.markdown(
     """
@@ -89,11 +91,12 @@ st.markdown(
 )
 selected_tools = st.multiselect('Tools', tools, label_visibility = 'collapsed')
 
+st.divider()
 
 st.markdown(
     """
-    <h4 style="text-align: left; padding-top: 100px; color: black; font-family: 'Constantia'; ">
-        Get the most suitable jobs for your current skills 👇
+    <h4 style="text-align: left; padding-top: 70px; color: black; font-family: 'Constantia'; ">
+        Get the most suitable jobs for your current skills 
     </h4>
     """,
     unsafe_allow_html=True
@@ -110,10 +113,11 @@ if st.button('Hit here 😃',use_container_width=True):
     else :
         st.switch_page("pages/predict_jobs.py")
 
+
 st.markdown(
     """
-    <h4 style="text-align: left; padding-top: 100px; color: black; font-family: 'Constantia'; ">
-        Get the additional skills you need for a specific job 👇
+    <h4 style="text-align: left; padding-top: 50px; color: black; font-family: 'Constantia'; ">
+        Get the additional skills you need for a specific job 
     </h4>
     """,
     unsafe_allow_html=True
@@ -121,10 +125,13 @@ st.markdown(
 if st.button('Hit here 😀',use_container_width=True):
     # Store selected values in session state
     st.session_state.selected_skills = skills
+    st.session_state.available_jobs = jobs
     if len(skills) == 0:
         st.warning('Select your current skills')       
     else :
         st.switch_page("pages/simulate_skills.py")
+    
+    
 
 
 
