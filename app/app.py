@@ -16,6 +16,7 @@ othertech = data['MiscTechHaveWorkedWith'].columns.tolist()
 tools = data['ToolsTechHaveWorkedWith'].columns.tolist()
 
 jobs = data['DevType'].columns.tolist()
+st.session_state.available_jobs = jobs
 
 # for the heading
 st.markdown(
@@ -26,10 +27,11 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+st.divider()
 # for header to select skills
 st.markdown(
     """
-    <h4 style="text-align: left; padding-top: 100px; color: black; font-family: 'Constantia'; ">
+    <h4 style="text-align: left; padding-top: 50px; color: black; font-family: 'Constantia'; ">
         Select your current skills ⭐
     </h4>
     """,
@@ -90,23 +92,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 selected_tools = st.multiselect('Tools', tools, label_visibility = 'collapsed')
+skills = [] + selected_languages + selected_databases + selected_frameworks \
+        + selected_othertech + selected_tools
+
+st.session_state.selected_skills = skills
 
 st.divider()
 
 st.markdown(
     """
-    <h4 style="text-align: left; padding-top: 70px; color: black; font-family: 'Constantia'; ">
+    <h4 style="text-align: left; padding-top: 50px; color: black; font-family: 'Constantia'; ">
         Get the most suitable jobs for your current skills 
     </h4>
     """,
     unsafe_allow_html=True
 )
-skills = [] + selected_languages + selected_databases + selected_frameworks \
-        + selected_othertech + selected_tools
+
 
 if st.button('Hit here 😃',use_container_width=True):
     # Store selected values in session state
-    st.session_state.selected_skills = skills
+    
 
     if len(skills) == 0:
         st.warning('Select your current skills')       
@@ -122,17 +127,15 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 if st.button('Hit here 😀',use_container_width=True):
     # Store selected values in session state
-    st.session_state.selected_skills = skills
-    st.session_state.available_jobs = jobs
+    
     if len(skills) == 0:
         st.warning('Select your current skills')       
     else :
         st.switch_page("pages/simulate_skills.py")
     
-    
-
 
 
 
